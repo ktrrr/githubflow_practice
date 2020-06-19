@@ -1,7 +1,16 @@
-# 初めてチーム開発にJOINしたときにmustで使うgit command
+# 初めてチーム開発にJOINしたときにmustで使うgitコマンド
+
+チュートリアルが出来る準備をする。
+
+- 自分のgithubのリモートリポジトリを作成する
+- 作成した場所になにかファイルをアップロードする
+- 自分のローカルの開発場所に移動する
 
 1. ローカルにリポジトリを作成する
  - git clone <リモートリポジトリのurl>
+
+3. プッシュしたいリモートリポジトリのURLを追加する
+ - git remote add origin URL
 
 2. リモートのmasterブランチの最新の状態をローカルリポジトリの現在のブランチにマージする
  - 下記のどれでも同じ挙動です。
@@ -9,32 +18,32 @@
  - git pull
  - git fetch → git merge origin/master
 
-3. コミット履歴を確認する
+4. コミット履歴を確認する
  - git log --graph --oneline --decorate
 
-4. ローカルリポジトリで新しいブランチを作成して移動する
+5. ローカルリポジトリで新しいブランチを作成して移動する
   - 下記のどれでも同じ挙動です。
  - git checkout -b feature/hoge
  - git branch feature/hoge → git checkout feature/hoge
 
-5. hogeの機能を開発する。githubflow_practice.mdファイルを保存。
+6. hogeの機能を開発する。githubflow_practice.mdファイルを保存。
 
 
-6. ステージにファイルを追加する
+7. ステージにファイルを追加する
  - git add githubflow_practice.md
 
-7. ステージにファイルが追加されているか確認する
+8. ステージにファイルが追加されているか確認する
  - git status
 
-8. ステージに追加したファイルをローカルリポジトリにコミットする
+9. ステージに追加したファイルをローカルリポジトリにコミットする
  - git commit -m "これは開発メンバーへのメッセージです。機能hogeを開発しました。"
  - git commit → vimが立ち上がるのでメッセージを記入して esc+:wq を入力
 
-9. 開発した機能をリモートリポジトリにプッシュする
+10. 開発した機能をリモートリポジトリにプッシュする
  - git push origin feature/hoge
 
-10. githubのWEBサイトに移動してプルリクエストを作成する
+11. githubのWEBサイトに移動してプルリクエストを作成する
  - レビュワーをきめる
 
-11. レビュワーがレビューして問題なければmasterブランチにマージする
+12. レビュワーがレビューして問題なければmasterブランチにマージする
 
